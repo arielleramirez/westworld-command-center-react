@@ -1,16 +1,14 @@
-import React from 'react';
-import { Segment } from 'semantic-ui-react'
-import HostList from './HostList'
+import React from "react";
+import { Segment } from "semantic-ui-react";
+import HostList from "./HostList";
 
-
-const ColdStorage = () => {
-
-  return(
-    <Segment style={{height:'100%'}}>
+const ColdStorage = props => {
+  return (
+    <Segment style={{ height: "100%" }}>
       <h3>ColdStorage</h3>
-      <HostList />
+      <HostList hosts={props.hosts} handleClick={props.handleClick} />
     </Segment>
-  )
-}
+  );
+};
 
-export default ColdStorage
+export default ColdStorage;
